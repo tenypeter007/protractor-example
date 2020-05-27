@@ -18,6 +18,12 @@ exports.config = {
         })
       });
     },
-
+    capabilities: {
+        browserName: 'chrome',
+      
+        chromeOptions: {
+           args: [ "--no-sandbox", "---disable-dev-shm-usage"]
+         }
+      }
     
   };
