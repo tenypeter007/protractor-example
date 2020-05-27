@@ -17,5 +17,8 @@ steps:
 
 - script: |
     npm install
+  displayName: 'npm install'
+
+- script: |
     protractor conf.js
-  displayName: 'npm install and build'
+  displayName: 'running procator'
