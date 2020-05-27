@@ -20,7 +20,7 @@ steps:
   displayName: 'npm install'
 
   - script: |
-    ./node_modules/.bin/webdriver-manager update
+    ./node_modules/.bin/webdriver-manager update,
     ./node_modules/.bin/webdriver-manager start
 
   displayName: 'updating and starting webdriver agent'
