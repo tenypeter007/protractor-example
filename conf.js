@@ -22,7 +22,7 @@ exports.config = {
         browserName: 'chrome',
       
         chromeOptions: {
-           args: [ "--no-sandbox", "---disable-dev-shm-usage"]
+           args: [ "--headless", "--disable-gpu", "--window-size=800,600"]
          }
       }
     
