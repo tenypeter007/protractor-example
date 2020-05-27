@@ -6,7 +6,6 @@ exports.config = {
       var AllureReporter = require('jasmine-allure-reporter');
       jasmine.getEnv().addReporter(new AllureReporter({
         resultsDir: 'allure-results'
-
       }));
 
       jasmine.getEnv().afterEach(function(done){
@@ -17,6 +16,23 @@ exports.config = {
           done();
         })
       });
+
+      var jasmineReporters = require('jasmine-reporters');
+      var junitReporter = new jasmineReporters.JUnitXmlReporter({
+
+        // setup the output path for the junit reports
+        savePath: 'output/',
+  
+        // conslidate all true:
+        //   output/junitresults.xml
+        //
+        // conslidate all set to false:
+        //   output/junitresults-example1.xml
+        //   output/junitresults-example2.xml
+        consolidateAll: false
+  
+      });
+       jasmine.getEnv().addReporter(junitReporter);
     }
 
     
