@@ -24,7 +24,7 @@ steps:
   displayName: 'npm install protractor'
   
 - script: |
-    ./node_modules/.bin/webdriver-manager update
+    ./node_modules/.bin/webdriver-manager update --versions.chrome 81.0.4044.138
     ./node_modules/.bin/webdriver-manager start --detach
     
 
