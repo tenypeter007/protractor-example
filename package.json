@@ -13,6 +13,7 @@
     "protractor-html-reporter-2": "^1.0.4"
   },
   "devDependencies": {
+    "jasmine-allure-reporter": "^1.0.2",
     "jasmine-reporters": "^2.3.2",
     "protractor": "^7.0.0",
     "protractor-beautiful-reporter": "^1.3.6",

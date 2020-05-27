@@ -12,6 +12,6 @@ describe('angularjs homepage todo list', function() {
       // You wrote your first test, cross it off the list
       todoList.get(2).element(by.css('input')).click();
       var completedAmount = element.all(by.css('.done-true'));
-      expect(completedAmount.count()).toEqual(1);
+      expect(completedAmount.count()).toEqual(2);
     });
   });
