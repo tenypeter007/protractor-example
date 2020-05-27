@@ -24,5 +24,5 @@ steps:
   displayName: 'npm install protractor'
 
 - script: |
-    protractor conf.js
+    ./node_modules/.bin/protractor conf.js
   displayName: 'running protractor'
