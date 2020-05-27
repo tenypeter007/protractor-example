@@ -35,6 +35,10 @@ steps:
     
 
   displayName: 'starting webdriver agent'
+  
+- script: |
+    npm install jasmine-allure-reporter
+  displayName: 'added jasmine-allure-reporter'
 
 - script: |
     ./node_modules/.bin/protractor conf.js
