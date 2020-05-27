@@ -26,8 +26,15 @@ steps:
 - script: |
     ./node_modules/.bin/webdriver-manager update
     ./node_modules/.bin/webdriver-manager start --detach
+    
 
-  displayName: 'updating and starting webdriver agent'
+  displayName: 'updating  webdriver agent'
+
+  - script: |
+    ./node_modules/.bin/webdriver-manager start --detach
+    
+
+  displayName: 'starting webdriver agent'
 
 - script: |
     ./node_modules/.bin/protractor conf.js
