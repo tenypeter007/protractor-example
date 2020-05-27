@@ -20,14 +20,16 @@ steps:
   displayName: 'npm install'
 
 - script: |
-    ./node_modules/.bin/webdriver-manager update
-    ./node_modules/.bin/webdriver-manager start
-
-  displayName: 'updating and starting webdriver agent'
-
-- script: |
     npm install protractor
   displayName: 'npm install protractor'
+  
+- task: CmdLine@2
+  inputs:
+    script: |
+      ./node_modules/.bin/webdriver-manager update
+        ./node_modules/.bin/webdriver-manager start
+
+  displayName: 'updating and starting webdriver agent'
 
 - script: |
     ./node_modules/.bin/protractor conf.js
