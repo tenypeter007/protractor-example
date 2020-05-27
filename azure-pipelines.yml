@@ -47,3 +47,9 @@ steps:
 - script: |
     allure generate allure-results --clean -o allure-report || true
   displayName: 'generating allure report'
+
+- task: queryWorkItems@0
+  inputs:
+      queryId: 'taskquery'
+      maxThreshold: '2'
+      minThreshold: '0'
