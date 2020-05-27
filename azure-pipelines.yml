@@ -16,6 +16,6 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-  
+    npm install
     protractor conf.js
   displayName: 'npm install and build'
