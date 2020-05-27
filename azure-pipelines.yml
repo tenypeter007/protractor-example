@@ -52,3 +52,8 @@ steps:
     ./node_modules/.bin/allure generate allure-results --clean -o allure-report || true
   displayName: 'generating allure report'
 
+- task: PublishTestResults@2
+  inputs:
+      testResultsFormat: 'JUnit'
+      testResultsFiles: '*output/*.xml'
+
