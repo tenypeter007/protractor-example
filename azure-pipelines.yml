@@ -30,7 +30,7 @@ steps:
 
   displayName: 'updating  webdriver agent'
 
-  - script: |
+- script: |
     ./node_modules/.bin/webdriver-manager start --detach
     
 
