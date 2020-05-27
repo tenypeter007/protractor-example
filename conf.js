@@ -6,7 +6,7 @@ exports.config = {
       var AllureReporter = require('jasmine-allure-reporter');
       jasmine.getEnv().addReporter(new AllureReporter({
         resultsDir: 'allure-results'
-        
+
       }));
 
       jasmine.getEnv().afterEach(function(done){
@@ -17,5 +17,9 @@ exports.config = {
           done();
         })
       });
+    },
+
+    capabilities: {
+        browserName: 'firefox'
     }
   };
