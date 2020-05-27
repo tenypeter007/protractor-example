@@ -19,6 +19,12 @@ steps:
     npm install
   displayName: 'npm install'
 
+  - script: |
+    ./node_modules/.bin/webdriver-manager update
+    ./node_modules/.bin/webdriver-manager start
+
+  displayName: 'updating and starting webdriver agent'
+
 - script: |
     npm install protractor
   displayName: 'npm install protractor'
