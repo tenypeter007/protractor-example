@@ -49,7 +49,7 @@ steps:
   displayName: 'insatll allure command line '
 
 - script: |
-    ./node_modules/.bin/allure generate allure-results --clean -o allure-report || true
+    .\node_modules\.bin\allure generate allure-results --clean -o allure-report || true
   displayName: 'generating allure report'
 
 - task: PublishTestResults@2
