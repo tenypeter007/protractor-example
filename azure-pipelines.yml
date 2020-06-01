@@ -63,3 +63,7 @@ steps:
     artifact: 'artifacts'
     publishLocation: 'pipeline'
 
+- task: PublishProtractorReport@1
+  inputs:
+    cwd: '$(System.DefaultWorkingDirectory)/tmp/screenshots'
+
